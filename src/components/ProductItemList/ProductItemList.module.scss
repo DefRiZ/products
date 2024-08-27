@@ -1,0 +1,22 @@
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 20px 0;
+}
+
+.image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.title {
+  margin: 15px 0px;
+  text-align: center;
+  max-width: 250px;
+}
+
+.price {
+}
