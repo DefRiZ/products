@@ -8,11 +8,19 @@ import { Link } from "react-router-dom";
 
 function Main() {
   const context = React.useContext(ProductsContext);
-  const { products, setCount } = context!;
+  const { products, published, setCount, setPublished } = context!;
+  const changePublished = () => {
+    setPublished(!published);
+  };
   return (
     <div>
       <div>
         <Link to="/create">Create</Link>
+      </div>
+      <div>
+        <button onClick={changePublished}>
+          {published ? "Show Unpublished" : "Show Published"}
+        </button>
       </div>
       <div>
         <ButtonCount text={"8 Products"} count={8} setCount={setCount} />
@@ -20,6 +28,7 @@ function Main() {
         <ButtonCount text={"All Products"} count={20} setCount={setCount} />
       </div>
       <Title text="Products text project" sizes={"2xl"} />
+      <div></div>
       <ProductList products={products} />
     </div>
   );

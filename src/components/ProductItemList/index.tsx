@@ -26,6 +26,7 @@ export const ProductItemList: React.FC<Product> = ({
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.price}>{price}</p>
       <Link to={`/products/${id}`}>View Details</Link>
+      <Link to={`/edit/${id}`}>Edit</Link>
     </li>
   );
 };
