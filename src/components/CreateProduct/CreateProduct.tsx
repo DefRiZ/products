@@ -3,9 +3,7 @@ import axios from "axios";
 import { ProductsContext } from "../../context/ProductsContext";
 import { useNavigate } from "react-router-dom";
 
-type Props = {};
-
-export const CreateProduct: React.FC<Props> = () => {
+export const CreateProduct: React.FC = () => {
   const [name, setName] = React.useState<string>("");
   const [price, setPrice] = React.useState<string>("");
   const [description, setDiscription] = React.useState<string>("");

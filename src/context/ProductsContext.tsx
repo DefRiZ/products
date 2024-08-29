@@ -24,7 +24,6 @@ export const ProductsProvider: React.FC<ProductsProviderProps> = ({
 }) => {
   const [products, setProducts] = React.useState<Product[]>([]);
   const [count, setCount] = React.useState<number>(8);
-
   const [published, setPublished] = React.useState<boolean>(() => {
     const storedValue = localStorage.getItem("published");
     return storedValue !== null ? JSON.parse(storedValue) : true;
