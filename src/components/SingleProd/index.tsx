@@ -7,9 +7,12 @@ export const SingleProd: React.FC<Product> = () => {
   const { id } = useParams();
   const [product, setProduct] = React.useState<Product>();
   React.useEffect(() => {
-    axios.get(`https://fakestoreapi.com/products/${id}`).then((res) => {
-      setProduct(res.data);
-    });
+    axios
+      .get(`https://3813418464bdda33.mokky.dev/products/${id}`)
+      .then((res) => {
+        setProduct(res.data);
+        console.log(res.data);
+      });
   }, [id]);
 
   if (!product) return <div>Loading</div>;

@@ -10,6 +10,8 @@ export interface Product {
   category?: string;
   image?: string;
   rating?: { rate: number; count: number };
+  createdAt?: string;
+  published?: boolean;
 }
 
 export const ProductItemList: React.FC<Product> = ({
